@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alphabet Game</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Floating Emojis -->
+<div class="floating-elements">
+    <span>🐶</span><span>🐱</span><span>🧸</span><span>🎈</span>
+    <span>🚗</span><span>🍎</span><span>🌈</span><span>⭐</span>
+</div>
+
+<div class="bg"></div>
+
+<div class="top-bar">
+    <h1>🌈 Alphabet Learning Game 🎓</h1>
+     
+    <div class="controls">
+       <input type="number" id="customTime" value="60" placeholder="⏱️">
+        <!-- 🎵 ADD HERE -->
+    <button id="musicToggle" onclick="toggleMusic()">🔇 Music Off</button>
+    
+       <button onclick="startLearning()" class="btn learn">📘 Learn</button>
+    <button onclick="startQuiz('easy')" class="btn easy">🟢 Easy</button>
+     <button onclick="startQuiz('medium')" class="btn medium">🟡 Medium</button>
+    <button onclick="startQuiz('hard')" class="btn hard">🔴 Hard</button>
+    </div>
+
+    <h3>🏆 Top Scores</h3>
+    <div id="leaderboard"></div>
+</div>
+
+<div class="container">
+
+    <h2 id="question">Choose Mode 👆</h2>
+
+    <div class="stats">
+        <div>⏱️ Time: <span id="timer">0</span></div>
+        <div>⭐ Score: <span id="score">0</span></div>
+    </div>
+
+    <div id="alphabetContainer" class="alphabet-container"></div>
+
+    <div class="display-card">
+        <img id="imageBox" src="" alt="">
+        <h2 id="textBox">Click a letter 👆</h2>
+    </div>
+
+</div>
+
+<footer>Made by ❤️ Sachin Kumar</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<script src="script.js"></script>
+
+<audio id="bgMusic" loop>
+    <source src="sounds/bgMusic.mp3" type="audio/mpeg">
+</audio>
+</body>
+</html>
